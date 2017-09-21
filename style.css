@@ -1,0 +1,108 @@
+/*
+Theme Name: Advent Calendar
+Author: Simon Van Accoleyen
+Description: A minimalist yet beautiful advent calendar wordpress theme.
+Version: 0.0.1
+Tags: advent,calendar
+*/
+
+body{
+  margin-top: 30px;
+}
+header{
+  text-align: center;
+  margin-bottom: 50px;
+}
+header h1 a{
+  font-size: 7rem;
+  transition: color .3s ease-in-out;
+}
+header h1 a:hover{
+  text-decoration: none;
+}
+header .lead{
+  font-size: 2em;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+    display: block;
+}
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.card{
+  border-radius: 0px;
+}
+.grid-item .card {
+  padding: 40px;
+  margin-bottom: 35px;
+  border: 2px solid #0C98F5;
+  transition: background-color .35s ease;
+}
+.grid-item .card:hover {
+  background-color: #3375a9;
+}
+.grid-item h4.card-title{
+  color: #0C98F5;
+  font-size: 7em;
+}
+.grid-item a:hover{
+  text-decoration: none;
+}
+footer{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/****
+Fonts
+****/
+
+.HappyChristmas{
+  font-family: "HappyChristmas";
+  letter-spacing: -13px;
+}
+.CartoonBlocks{
+  font-family: "CartoonBlocks";
+  letter-spacing: -13px;
+}
+.ChristmasCandies{
+  font-family: "ChristmasCandies";
+  letter-spacing: -13px;
+}
+.ChristmasLights{
+  font-family: "ChristmasLights";
+}
+.Snowinter{
+  font-family: "Snowinter";
+}
+.iLoveChristmas{
+  font-family: "iLoveChristmas";
+}
+.CandyTime{
+  font-family: "CandyTime";
+  letter-spacing: -1px;
+}
