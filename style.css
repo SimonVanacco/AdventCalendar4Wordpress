@@ -96,7 +96,7 @@ article h1{
 
 }
 
-article img.size-large{
+img.size-large, img.size-full{
     max-width: 100%;
     height: auto;
 }
