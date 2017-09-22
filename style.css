@@ -2,13 +2,15 @@
 Theme Name: Advent Calendar 4 Wordpress
 Author: Simon Van Accoleyen
 Description: A minimalist yet beautiful advent calendar wordpress theme.
-Version: 0.0.4
+Version: 0.0.7
 Tags: advent,calendar
 */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body{
   margin-top: 30px;
 }
+
 /****
 Header
 ****/
@@ -28,10 +30,41 @@ header .lead{
   font-size: 2em;
 }
 
+/****
+Wrappers for almost every content. Frontpage, article, footer...
+****/
+
+.card{
+    border-radius: 0px;
+}
+.grid-item .card {
+    padding: 40px;
+    margin-bottom: 35px;
+    border: 2px solid #0C98F5;
+    transition: background-color .35s ease;
+}
+.grid-item .card:hover {
+    background-color: #3375a9;
+}
+.grid-item h4.card-title{
+    color: #0C98F5;
+    font-size: 7em;
+}
+.grid-item a:hover{
+    text-decoration: none;
+}
+
 
 /****
-Alignements
+Blog content & Alignement
 ****/
+
+article{
+    margin-bottom: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+}
 
 .alignleft {
     display: inline;
@@ -52,45 +85,33 @@ Alignements
     margin-right: auto;
 }
 
-/****
-Posts, Pages, Items, ...
-****/
-article{
-    margin-bottom: 40px;
-}
-aside{
-    margin-bottom: 70px;
-}
-.card{
-  border-radius: 0px;
-}
-.grid-item .card {
-  padding: 40px;
-  margin-bottom: 35px;
-  border: 2px solid #0C98F5;
-  transition: background-color .35s ease;
-}
-.grid-item .card:hover {
-  background-color: #3375a9;
-}
-.grid-item h4.card-title{
-  color: #0C98F5;
-  font-size: 7em;
-}
-.grid-item a:hover{
-  text-decoration: none;
-}
-
-/****
-Misc. Layout
-****/
 iframe{
     width: 100%; /* This seems to make the video a weird ratio. Temporarily workaround only */
 }
 
+article h1{
+    margin-bottom: 20px;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+article img.size-large{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/****
+Misc. Layout
+****/
+
 footer{
   text-align: center;
   margin-bottom: 30px;
+}
+aside{
+    margin-bottom: 70px;
 }
 
 /****
@@ -101,23 +122,29 @@ Fonts
   font-family: "HappyChristmas";
   letter-spacing: -13px;
 }
+
 .CartoonBlocks{
   font-family: "CartoonBlocks";
   letter-spacing: -13px;
 }
+
 .ChristmasCandies{
   font-family: "ChristmasCandies";
   letter-spacing: -13px;
 }
+
 .ChristmasLights{
   font-family: "ChristmasLights";
 }
+
 .Snowinter{
   font-family: "Snowinter";
 }
+
 .iLoveChristmas{
   font-family: "iLoveChristmas";
 }
+
 .CandyTime{
   font-family: "CandyTime";
   letter-spacing: -1px;
