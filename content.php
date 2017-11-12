@@ -32,11 +32,25 @@
       $itemClass = "";
       break;
   }
+  if(ARE_POSTS_DATECONTROLLED || $_SERVER['REMOTE_ADDR'] == ADMIN_IP){
 
+      $DATE_day = date('j');
+      $DATE_month = date('n');
+
+      if($DATE_month == 12 && $DATE_day >= intval(get_the_title())){
+          $linkParams = "href=\"" . get_permalink() . "\"";
+      } else {
+          $linkParams = "onclick=\"swal('Case Fermée!', 'Revenez dans les prochains jours', 'warning')\"";
+      }
+
+  } else {
+      $linkParams = "href=\"" . get_permalink() . "\"";
+  }
 ?>
 
+
 <div class="grid-item <?php echo $itemClass; ?> col-md-3" data-mh="grid-item">
-  <a href="<?php the_permalink(); ?>">
+  <a <?= $linkParams ?> >
     <div class="card text-center">
       <div class="card-body">
         <h4 class="card-title"><?php the_title(); ?></h4>
