@@ -32,7 +32,7 @@
       $itemClass = "";
       break;
   }
-  if(ARE_POSTS_DATECONTROLLED || $_SERVER['REMOTE_ADDR'] == ADMIN_IP){
+  if(ARE_POSTS_DATECONTROLLED && $_SERVER['REMOTE_ADDR'] != ADMIN_IP){
 
       $DATE_day = date('j');
       $DATE_month = date('n');
