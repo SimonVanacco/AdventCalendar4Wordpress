@@ -96,11 +96,14 @@ article h1{
 
 }
 
-img.size-large, img.size-full{
+.gallery-icon img, .size-large, img.size-full{
     max-width: 100%;
     height: auto;
 }
 
+.gallery-icon{
+    padding: 3px;
+}
 
 /****
 Misc. Layout
