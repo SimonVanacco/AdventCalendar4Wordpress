@@ -2,7 +2,7 @@
 Theme Name: Advent Calendar 4 Wordpress
 Author: Simon Van Accoleyen
 Description: A minimalist yet beautiful advent calendar wordpress theme.
-Version: 0.0.7
+Version: 0.1.7
 Tags: advent,calendar
 */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
@@ -54,6 +54,9 @@ Wrappers for almost every content. Frontpage, article, footer...
     text-decoration: none;
 }
 
+aside .card-body{
+    margin-bottom: 20px;
+}
 
 /****
 Blog content & Alignement
@@ -103,6 +106,23 @@ article h1{
 
 .gallery-icon{
     padding: 3px;
+}
+
+/****
+Comment Layout
+****/
+.comment-row{
+    margin-top: 15px;
+    border-bottom: 2px solid lightblue;
+    margin-right: 15px;
+}
+h2.comment-author{
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.comment-meta-item{
+    font-size: 0.8rem;
 }
 
 /****

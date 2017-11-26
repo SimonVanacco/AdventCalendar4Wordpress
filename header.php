@@ -6,7 +6,7 @@
     <?php wp_head(); ?>
     <style>
         body{
-            background-image: url('<?php echo get_bloginfo('template_directory') ?>/pictures/bck.jpg');
+            background-image: url('<?php echo get_bloginfo('template_directory') ?>/pictures/bck@0,5x.jpg');
             background-size: cover;
         }
         @font-face {

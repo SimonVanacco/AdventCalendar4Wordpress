@@ -49,7 +49,7 @@
 ?>
 
 
-<div class="grid-item <?php echo $itemClass; ?> col-md-3" data-mh="grid-item">
+<div class="grid-item <?php echo $itemClass; ?> col-lg-3 col-md-6 col-xs-12" data-mh="grid-item">
   <a <?= $linkParams ?> >
     <div class="card text-center">
       <div class="card-body">

@@ -1,47 +1,61 @@
 <aside id="comments" class="col-md-9">
- <div class="card card-body">
-     <?php if ( have_comments() ) : ?>
-         <h2 class="comments-title">
-             <?php
-             $comments_number = get_comments_number();
-             if ( 1 === $comments_number ) {
-                 echo "1 commentaire sur cette case: réagissez à votre tour!";
-             } else {
+    <div class="card card-body">
+        <?php
+        $fields =  array(
 
-                 echo $comments_number." commentaires sur cette case";
-             }
-             ?>
-         </h2>
+            'author' =>
+                '<div class="form-group"><label for="author">Nom</label> ' .
+                ( $req ? '<span class="required">*</span>' : '' ) .
+                '<input class="form-control" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+                '"/></div>',
 
-         <?php the_comments_navigation(); ?>
+            'email' =>
+                '<div class="form-group"><label for="email">Adresse mail</label> ' .
+                ( $req ? '<span class="required">*</span>' : '' ) .
+                '<input class="form-control" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+                '"/></div>'
+        );
 
-         <ol class="comment-list">
-             <?php
-             wp_list_comments( array(
-                 'style'       => 'ol',
-                 'short_ping'  => true,
-                 'avatar_size' => 42,
-             ) );
-             ?>
-         </ol><!-- .comment-list -->
+        comment_form( array(
+            'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',
+            'title_reply_after'  => '</h2>',
+            'fields' => $fields,
+            'class_submit' => 'btn btn-primary',
+            'comment_field' => '<div class="form-group"><label for="comment"> Commentaire</label> '.
+                ( $req ? '<span class="required">*</span>' : '' ) .
+                '<textarea id="comment" name="comment" class="form-control" aria-required="true">' .
+                '</textarea></div>'
+        ) );
+        ?>
+    </div>
+    <div class="card card-body">
+        <?php if ( have_comments() ) : ?>
+            <h2 class="comments-title">
+                Commentaire(s): 
+            </h2>
 
-         <?php the_comments_navigation(); ?>
+            <?php the_comments_navigation(); ?>
 
-     <?php endif; // Check for have_comments(). ?>
+            <ol class="comment-list">
+                <?php
+                wp_list_comments( array(
+                    'style'       => 'div',
+                    'walker'  => new comment_walker(),
+                    'max-depth' => 1,
+                    'avatar_size' => 42,
+                ) );
+                ?>
+            </ol><!-- .comment-list -->
 
-     <?php
-     // If comments are closed and there are comments, let's leave a little note, shall we?
-     if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-         ?>
-         <p class="no-comments">Il n'y a pas encore de commentaires... Soyez le premier!</p>
-     <?php endif; ?>
+            <?php the_comments_navigation(); ?>
 
-     <?php
-     comment_form( array(
-         'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',
-         'title_reply_after'  => '</h2>',
-     ) );
-     ?>
+        <?php endif; // Check for have_comments(). ?>
 
- </div>
+        <?php
+        // If comments are closed and there are comments, let's leave a little note, shall we?
+        if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+            ?>
+            <p class="no-comments">Il n'y a pas encore de commentaires... Soyez le premier!</p>
+        <?php endif; ?>
+    </div>
 </aside><!-- .comments-area -->
