@@ -47,7 +47,7 @@ function start_el( &$output, $comment, $depth = 1, $args = array(), $id = 0 ) {
     <article <?php comment_class(empty( $args['has_children'] ) ? '' :'parent') ?> id="comment-<?php comment_ID() ?>">
     <div class="comment-row row">
         <figure class="gravatar col-md-2">
-            <?php echo get_avatar( $comment, 120, 'http://www.gravatar.com/avatar/88a771dc1a611b2038c9a0ad0770b595?s=120', 'Author’s gravatar', array('class' => 'img-fluid')); ?>
+            <?php echo get_avatar( $comment, 120, 'https://www.gravatar.com/avatar/88a771dc1a611b2038c9a0ad0770b595?s=120', 'Author’s gravatar', array('class' => 'img-fluid')); ?>
         </figure>
         <div class="col-md-10">
             <div class="comment-meta post-meta" role="complementary">

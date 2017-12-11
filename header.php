@@ -6,9 +6,10 @@
     <?php wp_head(); ?>
     <style>
         body{
-            background-image: url('<?php echo get_bloginfo('template_directory') ?>/pictures/bck@0,5x.jpg');
+            background: url('<?php echo get_bloginfo('template_directory') ?>/pictures/bck@0,5x.jpg') fixed;
             background-size: cover;
         }
+
         @font-face {
             font-family: Snowinter;
             src: url('<?php echo get_bloginfo('template_directory'); ?>/fonts/snowinter.ttf');
