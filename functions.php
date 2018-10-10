@@ -1,7 +1,5 @@
 <?php
 
-
-
 function add_header_assets() {
 
     $dirprefix = get_bloginfo('template_directory')."/assets/";
@@ -59,5 +57,5 @@ function add_footer_assets() {
 }
 add_action('wp_footer', 'add_footer_assets');
 
-
+require('inc/template-functions.php');
 require('inc/CommentWalker.php');
