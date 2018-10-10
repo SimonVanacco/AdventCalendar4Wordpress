@@ -40,7 +40,7 @@
                 <?php
                 wp_list_comments( array(
                     'style'       => 'div',
-                    'walker'  => new comment_walker(),
+                    'walker'  => new CommentWalker(),
                     'max-depth' => 1,
                     'avatar_size' => 42,
                 ) );

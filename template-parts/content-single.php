@@ -2,7 +2,7 @@
     $DATE_day = date('j');
     $DATE_month = date('n');
 
-    if(($DATE_month == 12 && $DATE_day >= intval(get_the_title())) || !ARE_POSTS_DATECONTROLLED || ADMIN_IP == $_SERVER['REMOTE_ADDR']){
+    if($DATE_month == 12 && $DATE_day >= intval(get_the_title()) || (current_user_can('editor') || current_user_can('administrator') )) {
 ?>
         <article class="col-md-9">
             <div class="card">
@@ -14,11 +14,9 @@
 
 <?php
     } else {
-        ?>
-        <script>
-            window.location.href = '/';
-        </script>
-        <?php
-        exit();
+
+        //TODO
+        echo "Case fermée!";
+
     }
 ?>
