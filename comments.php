@@ -55,7 +55,7 @@
         // If comments are closed and there are comments, let's leave a little note, shall we?
         if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
             ?>
-            <p class="no-comments">Il n'y a pas encore de commentaires... Soyez le premier!</p>
+            <p class="no-comments">Il n'y a pas encore de commentaire... Soyez le premier!</p>
         <?php endif; ?>
     </div>
 </aside><!-- .comments-area -->

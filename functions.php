@@ -1,5 +1,4 @@
 <?php
-include('theme-config.php');
 
 class comment_walker extends Walker_Comment {
 

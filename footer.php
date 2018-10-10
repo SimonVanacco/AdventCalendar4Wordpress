@@ -1,5 +1,5 @@
 <footer class="card card-body">
-    <p class="card-text">Laurence Van Accoleyen 2017 - Design par Simon V.A.</p>
+    <p class="card-text">Laurence Van Accoleyen 2018 - Design par Simon V.A.</p>
 </footer>
 </div><!-- end container -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
