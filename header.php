@@ -8,7 +8,7 @@
 
     <title><?php echo get_option('blogname'); ?></title>
 </head>
-<body>
+<body class="custom-background">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">

@@ -1,15 +1,25 @@
 <?php
 
+$defaults = array(
+    'default-color'          => '',
+    'default-image'          => '',
+    'default-repeat'         => 'repeat',
+    'default-position-x'     => 'left',
+    'default-position-y'     => 'top',
+    'default-size'           => 'auto',
+    'default-attachment'     => 'scroll',
+    'wp-head-callback'       => '_custom_background_cb',
+    'admin-head-callback'    => '',
+    'admin-preview-callback' => ''
+);
+add_theme_support( 'custom-background', $defaults );
+
+
 function add_header_assets() {
 
     $dirprefix = get_bloginfo('template_directory')."/assets/";
     ?>
     <style>
-        body{
-            background: url('<?php echo $dirprefix ?>/pictures/bck@0,5x.jpg') fixed;
-            background-size: cover;
-        }
-
         @font-face {
             font-family: Snowinter;
             src: url('<?php echo $dirprefix ?>/fonts/snowinter.ttf');
