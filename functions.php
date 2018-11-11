@@ -25,10 +25,6 @@ function add_header_assets() {
             src: url('<?php echo $dirprefix ?>/fonts/snowinter.ttf');
         }
         @font-face {
-            font-family: ChristmasLights;
-            src: url('<?php echo $dirprefix ?>/fonts/ChristmasLights.ttf');
-        }
-        @font-face {
             font-family: ChristmasCandies;
             src: url('<?php echo $dirprefix ?>/fonts/PWChristmascandies.ttf');
         }

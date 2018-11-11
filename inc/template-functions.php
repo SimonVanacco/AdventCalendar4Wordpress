@@ -8,7 +8,7 @@
 
 function get_randsnowy_font() {
 
-    switch (rand(1,7)) {
+    switch (rand(1,6)) {
 
         case 1:
             $fontClass = "HappyChristmas";
@@ -23,12 +23,9 @@ function get_randsnowy_font() {
             $fontClass = "iLoveChristmas";
             break;
         case 5:
-            $fontClass = "ChristmasLights";
-            break;
-        case 6:
             $fontClass = "Snowinter";
             break;
-        case 7:
+        case 6:
             $fontClass = "CandyTime";
             break;
         default:

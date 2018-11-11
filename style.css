@@ -2,59 +2,75 @@
 Theme Name: Advent Calendar WP
 Author: Simon Van Accoleyen
 Description: A minimalist yet beautiful advent calendar wordpress theme.
-Version: 0.8.0
+Version: 0.9.0
 Tags: advent,calendar
 */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-body{
-  margin-top: 30px;
+body {
+    margin-top: 30px;
 }
 
 /****
 Header
 ****/
 
-header{
-  text-align: center;
-  margin-bottom: 50px;
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    background-color: rgba(249, 249, 249, 0.8);
 }
-header h1 a{
-  font-size: 7rem;
-  transition: color .3s ease-in-out;
+
+header h1 a {
+    color: #005b96;
+    font-size: 7rem;
+    transition: color .3s ease-in-out;
 }
-header h1 a:hover{
-  text-decoration: none;
+
+header h1 a:hover {
+    text-decoration: none;
 }
-header .lead{
-  font-size: 2em;
+
+header .lead {
+    color: #03396c;
+    font-size: 2em;
 }
 
 /****
 Wrappers for almost every content. Frontpage, article, footer...
 ****/
 
-.card{
+.card {
     border-radius: 0px;
 }
+
 .grid-item .card {
     padding: 40px;
     margin-bottom: 35px;
-    border: 2px solid #0C98F5;
+    border: 2px solid #03396c;
+    background-color: rgba(179, 205, 224, 1);
     transition: background-color .35s ease;
 }
-.grid-item .card:hover {
-    background-color: #3375a9;
+
+.grid-item.unopen .card {
+    background-color: rgba(179, 205, 224, 0.8);
 }
-.grid-item h4.card-title{
-    color: #0C98F5;
+
+.grid-item .card:hover {
+    background-color: #005b96;
+    color: #011f4b;
+}
+
+.grid-item h4.card-title {
+    color: #03396c;
     font-size: 7em;
 }
-.grid-item a:hover{
+
+.grid-item a:hover {
     text-decoration: none;
 }
 
-aside .card-body{
+aside .card-body {
     margin-bottom: 20px;
 }
 
@@ -62,7 +78,7 @@ aside .card-body{
 Blog content & Alignement
 ****/
 
-article{
+article {
     margin-bottom: 40px;
     font-family: 'Open Sans', sans-serif;
     font-size: 17px;
@@ -88,39 +104,45 @@ article{
     margin-right: auto;
 }
 
-iframe{
+iframe {
     width: 100%; /* This seems to make the video a weird ratio. Temporarily workaround only */
 }
 
-article h1{
+article h1 {
     margin-bottom: 20px;
     display: block;
     font-family: 'Open Sans', sans-serif;
 }
 
-.gallery-icon img, .size-large, img.size-full{
+.wp-caption {
+    width: auto !important;
+}
+
+.gallery-icon img, .size-large, img.size-full {
     max-width: 100%;
     height: auto;
 }
 
-.gallery-icon{
+.gallery-icon {
     padding: 3px;
 }
 
 /****
 Comment Layout
 ****/
-.comment-row{
+.comment-row {
     margin-top: 15px;
     border-bottom: 2px solid lightblue;
     margin-right: 15px;
 }
-h2.comment-author{
+
+h2.comment-author {
     font-size: 1.3rem;
     margin-bottom: 0;
     font-weight: bold;
 }
-.comment-meta-item{
+
+.comment-meta-item {
     font-size: 0.8rem;
 }
 
@@ -128,11 +150,12 @@ h2.comment-author{
 Misc. Layout
 ****/
 
-footer{
-  text-align: center;
-  margin-bottom: 30px;
+footer {
+    text-align: center;
+    margin-bottom: 30px;
 }
-aside{
+
+aside {
     margin-bottom: 70px;
 }
 
@@ -140,34 +163,34 @@ aside{
 Fonts
 ****/
 
-.HappyChristmas{
-  font-family: "HappyChristmas";
-  letter-spacing: -13px;
+.HappyChristmas {
+    font-family: "HappyChristmas";
+    letter-spacing: -13px;
 }
 
-.CartoonBlocks{
-  font-family: "CartoonBlocks";
-  letter-spacing: -13px;
+.CartoonBlocks {
+    font-family: "CartoonBlocks";
+    letter-spacing: -13px;
 }
 
-.ChristmasCandies{
-  font-family: "ChristmasCandies";
-  letter-spacing: -13px;
+.ChristmasCandies {
+    font-family: "ChristmasCandies";
+    letter-spacing: -13px;
 }
 
-.ChristmasLights{
-  font-family: "ChristmasLights";
+.ChristmasLights {
+    font-family: "ChristmasLights";
 }
 
-.Snowinter{
-  font-family: "Snowinter";
+.Snowinter {
+    font-family: "Snowinter";
 }
 
-.iLoveChristmas{
-  font-family: "iLoveChristmas";
+.iLoveChristmas {
+    font-family: "iLoveChristmas";
 }
 
-.CandyTime{
-  font-family: "CandyTime";
-  letter-spacing: -1px;
+.CandyTime {
+    font-family: "CandyTime";
+    letter-spacing: -1px;
 }
