@@ -2,7 +2,7 @@
 Theme Name: Advent Calendar WP
 Author: Simon Van Accoleyen
 Description: A minimalist yet beautiful advent calendar wordpress theme.
-Version: 0.9.0
+Version: 1.0.0
 Tags: advent,calendar
 */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
@@ -16,9 +16,11 @@ Header
 ****/
 
 header {
-    text-align: center;
+    
     margin-bottom: 50px;
+    text-align: center;
     background-color: rgba(249, 249, 249, 0.8);
+
 }
 
 header h1 a {
@@ -37,52 +39,89 @@ header .lead {
 }
 
 /****
-Wrappers for almost every content. Frontpage, article, footer...
-****/
+Layout
+ */
 
 .card {
     border-radius: 0px;
 }
 
-.grid-item .card {
-    padding: 40px;
-    margin-bottom: 35px;
-    border: 2px solid #03396c;
-    background-color: rgba(179, 205, 224, 1);
-    transition: background-color .35s ease;
-}
-
-.grid-item.unopen .card {
-    background-color: rgba(179, 205, 224, 0.8);
-}
-
-.grid-item .card:hover {
-    background-color: #005b96;
-    color: #011f4b;
-}
-
-.grid-item h4.card-title {
-    color: #03396c;
-    font-size: 7em;
-}
-
-.grid-item a:hover {
-    text-decoration: none;
+aside {
+    margin-bottom: 70px;
 }
 
 aside .card-body {
     margin-bottom: 20px;
 }
 
+footer {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 /****
-Blog content & Alignement
+Home page grid & items
+****/
+
+.grid-item .card {
+
+    padding: 40px;
+    margin-bottom: 35px;
+
+    border: 2px solid #03396c;
+    background-color: rgba(179, 205, 224, 1);
+
+    transition: background-color .35s ease;
+
+}
+
+.grid-item.unopen .card {
+
+    background-color: rgba(179, 205, 224, 0.8);
+
+}
+
+.grid-item .card:hover {
+
+    background-color: #005b96;
+    color: #011f4b;
+
+}
+
+.grid-item h4.card-title {
+
+    color: #03396c;
+    font-size: 7em;
+
+}
+
+.grid-item a:hover {
+
+    text-decoration: none;
+
+}
+
+/****
+Article content & Position helpers
 ****/
 
 article {
+
     margin-bottom: 40px;
+
     font-family: 'Open Sans', sans-serif;
     font-size: 17px;
     font-weight: 400;
+
+}
+
+article h1 {
+
+    display: block;
+    margin-bottom: 20px;
+
+    font-family: 'Open Sans', sans-serif;
+
 }
 
 .alignleft {
@@ -98,20 +137,14 @@ article {
 }
 
 .aligncenter {
-    clear: both;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    clear: both;
 }
 
 iframe {
-    width: 100%; /* This seems to make the video a weird ratio. Temporarily workaround only */
-}
-
-article h1 {
-    margin-bottom: 20px;
+    margin: 0 auto;
     display: block;
-    font-family: 'Open Sans', sans-serif;
 }
 
 .wp-caption {
@@ -130,33 +163,9 @@ article h1 {
 /****
 Comment Layout
 ****/
-.comment-row {
-    margin-top: 15px;
-    border-bottom: 2px solid lightblue;
-    margin-right: 15px;
-}
 
-h2.comment-author {
-    font-size: 1.3rem;
-    margin-bottom: 0;
-    font-weight: bold;
-}
-
-.comment-meta-item {
-    font-size: 0.8rem;
-}
-
-/****
-Misc. Layout
-****/
-
-footer {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-aside {
-    margin-bottom: 70px;
+ol.comment-list {
+    padding: 0;
 }
 
 /****
@@ -176,10 +185,6 @@ Fonts
 .ChristmasCandies {
     font-family: "ChristmasCandies";
     letter-spacing: -13px;
-}
-
-.ChristmasLights {
-    font-family: "ChristmasLights";
 }
 
 .Snowinter {

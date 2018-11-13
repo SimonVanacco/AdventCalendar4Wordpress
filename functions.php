@@ -64,4 +64,4 @@ function add_footer_assets() {
 add_action('wp_footer', 'add_footer_assets');
 
 require('inc/template-functions.php');
-require('inc/CommentWalker.php');
+require('inc/class-wp-bootstrap-commentwalker.php');

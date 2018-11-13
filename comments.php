@@ -28,34 +28,21 @@
         ) );
         ?>
     </div>
-    <div class="card card-body">
-        <?php if ( have_comments() ) : ?>
-            <h2 class="comments-title">
-                Commentaire(s): 
-            </h2>
+    <?php if ( have_comments() ) : ?>
 
-            <?php the_comments_navigation(); ?>
+        <?php the_comments_navigation(); ?>
 
-            <ol class="comment-list">
-                <?php
-                wp_list_comments( array(
-                    'style'       => 'div',
-                    'walker'  => new CommentWalker(),
-                    'max-depth' => 1,
-                    'avatar_size' => 42,
-                ) );
-                ?>
-            </ol><!-- .comment-list -->
-
-            <?php the_comments_navigation(); ?>
-
-        <?php endif; // Check for have_comments(). ?>
-
-        <?php
-        // If comments are closed and there are comments, let's leave a little note, shall we?
-        if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+        <ol class="comment-list">
+            <?php
+            wp_list_comments( array(
+                'walker'  => new WP_Bootstrap_Commentwalker(),
+                'max-depth' => 1,
+                'avatar_size' => 42,
+            ) );
             ?>
-            <p class="no-comments">Il n'y a pas encore de commentaire... Soyez le premier!</p>
-        <?php endif; ?>
-    </div>
+        </ol><!-- .comment-list -->
+
+        <?php the_comments_navigation(); ?>
+
+    <?php endif; // Check for have_comments(). ?>
 </aside><!-- .comments-area -->
