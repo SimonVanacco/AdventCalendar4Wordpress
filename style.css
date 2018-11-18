@@ -2,7 +2,7 @@
 Theme Name: Advent Calendar WP
 Author: Simon Van Accoleyen
 Description: A minimalist yet beautiful advent calendar wordpress theme.
-Version: 1.0.0
+Version: 1.0.1
 Tags: advent,calendar
 */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
@@ -16,7 +16,7 @@ Header
 ****/
 
 header {
-    
+
     margin-bottom: 50px;
     text-align: center;
     background-color: rgba(249, 249, 249, 0.8);
@@ -136,10 +136,16 @@ article h1 {
     margin-left: 1.5em;
 }
 
-.aligncenter {
+.aligncenter,.aligncenter img {
     display: block;
     margin: 0 auto;
     clear: both;
+    text-align: center;
+}
+
+.wp-caption-text {
+    font-size: 0.9em;
+    color: #737373;
 }
 
 iframe {
