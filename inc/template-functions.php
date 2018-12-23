@@ -40,10 +40,12 @@ function get_randsnowy_font() {
 
 function can_enter_calendar($item_name) {
 
-    $DATE_day = date('j');
-    $DATE_month = date('n');
+    $calendar_edition = "2018-12-";
 
-    if( ($DATE_month == 12 && $DATE_day >= intval($item_name)) || (current_user_can('editor') || current_user_can('administrator') )) {
+    $today = strtotime(date('Y-m-d'));
+    $item_date = strtotime($calendar_edition.$item_name);
+
+    if( $item_date <= $today || (current_user_can('editor') || current_user_can('administrator') )) {
 
         return true;
 
