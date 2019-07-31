@@ -1,11 +1,15 @@
 <?php
 
   if(can_enter_calendar(get_the_title())){
-      $class = "grid-item ".get_randsnowy_font();
+
+      $class = "grid-item ".get_random_theme_font();
       $linkParams = "href=\"" . get_permalink() . "\"";
+
   } else {
-      $class = "grid-item unopen ".get_randsnowy_font();
+
+      $class = "grid-item unopen ".get_random_theme_font();
       $linkParams = "onclick=\"swal('Case Fermée!', 'Revenez dans les prochains jours', 'warning')\"";
+
   }
 
 ?>
