@@ -55,12 +55,11 @@ Tags: advent,calendar
 
 .CartoonBlocks {
     font-family: "CartoonBlocks";
-    letter-spacing: -13px;
 }
 
 .ChristmasCandies {
     font-family: "ChristmasCandies";
-    letter-spacing: -13px;
+    letter-spacing: -10px;
 }
 
 .Snowinter {
@@ -73,7 +72,6 @@ Tags: advent,calendar
 
 .CandyTime {
     font-family: "CandyTime";
-    letter-spacing: -1px;
 }
 
 body {
@@ -141,7 +139,12 @@ footer {
 
 
 .grid-item .card {
-    padding: 40px;
+
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+
+    padding: 38px 0;
     margin-bottom: 35px;
     border: 2px solid #03396c;
     background-color: rgba(179, 205, 224, 1);
@@ -159,7 +162,7 @@ footer {
 
 .grid-item h4.card-title {
     color: #03396c;
-    font-size: 7em;
+    font-size: 6rem;
 }
 
 .grid-item a:hover {
