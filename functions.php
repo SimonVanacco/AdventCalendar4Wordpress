@@ -36,9 +36,9 @@ function adventcalendar_scripts() {
 
     wp_enqueue_style('adventcalendar-style-bootstrap', get_theme_file_uri('/css/bootstrap.min.css'));
     wp_enqueue_style('adventcalendar-style-main', get_stylesheet_uri());
-    wp_enqueue_style('adventcalendar-style-bootstrap', get_theme_file_uri('/css/sweetalert.css'));
 
     wp_enqueue_script('adventcalendar-script-bootstrap', get_theme_file_uri('/js/bootstrap.min.js'), array('jquery'));
+    wp_enqueue_script('adventcalendar-script-swal', get_theme_file_uri('/js/sweetalert.min.js'));
 
 }
 add_action( 'wp_enqueue_scripts', 'adventcalendar_scripts' );
