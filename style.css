@@ -1,19 +1,88 @@
 /*
-Theme Name: Advent Calendar WP
+Theme Name: SVA Advent Calendar
 Author: Simon Van Accoleyen
 Description: A minimalist yet beautiful advent calendar wordpress theme.
-Version: 1.1.0
+Version: 1.2.0
 Tags: advent,calendar
 */
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Fonts
+# Header
+# Misc Elements
+# Index cards
+# Layout
+# WP Editor classes
+# Comments
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@font-face {
+    font-family: Snowinter;
+    src: url('fonts/snowinter.ttf');
+}
+@font-face {
+    font-family: ChristmasCandies;
+    src: url('fonts/PWChristmascandies.ttf');
+}
+@font-face {
+    font-family: HappyChristmas;
+    src: url('fonts/PWHappyChristmas.ttf');
+}
+@font-face {
+    font-family: CartoonBlocks;
+    src: url('fonts/CartoonBlocks.otf');
+}
+@font-face {
+    font-family: iLoveChristmas;
+    src: url('fonts/iLoveChristmas.ttf');
+}
+@font-face {
+    font-family: CandyTime;
+    src: url('fonts/CandyTime.ttf');
+}
+
+.HappyChristmas {
+    font-family: "HappyChristmas";
+    letter-spacing: -13px;
+}
+
+.CartoonBlocks {
+    font-family: "CartoonBlocks";
+}
+
+.ChristmasCandies {
+    font-family: "ChristmasCandies";
+    letter-spacing: -10px;
+}
+
+.Snowinter {
+    font-family: "Snowinter";
+}
+
+.iLoveChristmas {
+    font-family: "iLoveChristmas";
+}
+
+.CandyTime {
+    font-family: "CandyTime";
+}
 
 body {
     margin-top: 30px;
 }
 
-/****
-Header
-****/
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
 
 header {
 
@@ -38,67 +107,13 @@ header .lead {
     font-size: 2em;
 }
 
-/****
-Layout
- */
+
+/*--------------------------------------------------------------
+# Misc Elements
+--------------------------------------------------------------*/
 
 .card {
     border-radius: 0px;
-}
-
-aside {
-    margin-bottom: 70px;
-}
-
-aside .card-body {
-    margin-bottom: 20px;
-}
-
-footer {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/****
-Home page grid & items
-****/
-
-.grid-item .card {
-
-    padding: 40px;
-    margin-bottom: 35px;
-
-    border: 2px solid #03396c;
-    background-color: rgba(179, 205, 224, 1);
-
-    transition: background-color .35s ease;
-
-}
-
-.grid-item.unopen .card {
-
-    background-color: rgba(179, 205, 224, 0.8);
-
-}
-
-.grid-item .card:hover {
-
-    background-color: #005b96;
-    color: #011f4b;
-
-}
-
-.grid-item h4.card-title {
-
-    color: #03396c;
-    font-size: 7em;
-
-}
-
-.grid-item a:hover {
-
-    text-decoration: none;
-
 }
 
 .alert-25 {
@@ -111,28 +126,79 @@ Home page grid & items
     float: right;
 }
 
-/****
-Article content & Position helpers
-****/
+
+footer {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/*--------------------------------------------------------------
+# Index cards
+--------------------------------------------------------------*/
+
+
+.grid-item .card {
+
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+
+    padding: 38px 0;
+    margin-bottom: 35px;
+    border: 2px solid #03396c;
+    background-color: rgba(179, 205, 224, 1);
+    transition: background-color .35s ease;
+}
+
+.grid-item.unopen .card {
+    background-color: rgba(179, 205, 224, 0.8);
+}
+
+.grid-item .card:hover {
+    background-color: #005b96;
+    color: #011f4b;
+}
+
+.grid-item h4.card-title {
+    color: #03396c;
+    font-size: 6rem;
+}
+
+.grid-item a:hover {
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
 
 article {
-
     margin-bottom: 40px;
-
     font-family: 'Open Sans', sans-serif;
     font-size: 17px;
     font-weight: 400;
-
 }
 
 article h1 {
-
     display: block;
     margin-bottom: 20px;
-
     font-family: 'Open Sans', sans-serif;
-
 }
+
+aside {
+    margin-bottom: 70px;
+}
+
+aside .card-body {
+    margin-bottom: 20px;
+}
+
+
+/*--------------------------------------------------------------
+# WP Editor classes
+--------------------------------------------------------------*/
 
 .alignleft {
     display: inline;
@@ -176,42 +242,10 @@ iframe {
     padding: 3px;
 }
 
-/****
-Comment Layout
-****/
+/*--------------------------------------------------------------
+# Comments
+--------------------------------------------------------------*/
 
 ol.comment-list {
     padding: 0;
-}
-
-/****
-Fonts
-****/
-
-.HappyChristmas {
-    font-family: "HappyChristmas";
-    letter-spacing: -13px;
-}
-
-.CartoonBlocks {
-    font-family: "CartoonBlocks";
-    letter-spacing: -13px;
-}
-
-.ChristmasCandies {
-    font-family: "ChristmasCandies";
-    letter-spacing: -13px;
-}
-
-.Snowinter {
-    font-family: "Snowinter";
-}
-
-.iLoveChristmas {
-    font-family: "iLoveChristmas";
-}
-
-.CandyTime {
-    font-family: "CandyTime";
-    letter-spacing: -1px;
 }
