@@ -207,7 +207,7 @@ iframe {
     width: auto !important;
 }
 
-.gallery-icon img, .size-large, img.size-full {
+.gallery-icon img, .wp-block-img img, .size-large, img.size-full {
     max-width: 100%;
     height: auto;
 }
