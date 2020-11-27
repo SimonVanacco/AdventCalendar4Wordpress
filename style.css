@@ -98,6 +98,12 @@ header h1 a {
     transition: color .3s ease-in-out;
 }
 
+@media (max-width: 768px) {
+    header h1 a {
+        font-size: 6rem;
+    }
+}
+
 header h1 a:hover {
     text-decoration: none;
 }
