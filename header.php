@@ -10,7 +10,7 @@
     </head>
     <body class="custom-background">
 
-        <div class="container-fluid">
+        <div class="container">
 
             <div class="row justify-content-center">
                 <header class="col-md-6">
