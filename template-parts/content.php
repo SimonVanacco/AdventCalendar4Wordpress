@@ -14,7 +14,6 @@
 
 ?>
 
-
 <div class="grid-item <?php echo $class; ?> col-lg-3 col-md-6 col-sm-6 col-xs-6" data-mh="grid-item">
   <a <?= $linkParams ?> >
     <div class="card text-center">

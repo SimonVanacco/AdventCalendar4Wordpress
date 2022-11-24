@@ -78,6 +78,7 @@ body {
     margin-top: 30px;
 }
 
+.container-fluid {}
 
 /*--------------------------------------------------------------
 # Header
@@ -143,37 +144,10 @@ footer {
 # Index cards
 --------------------------------------------------------------*/
 
-
-.grid-item .card {
-
-    display: flex;
-    align-items: center;
-    vertical-align: middle;
-
-    padding: 38px 0;
-    margin-bottom: 35px;
-    border: 2px solid #03396c;
-    background-color: rgba(179, 205, 224, 1);
-    transition: background-color .35s ease;
+.grid-item.col-3 {
+    padding: 0;
 }
 
-.grid-item.unopen .card {
-    background-color: rgba(179, 205, 224, 0.8);
-}
-
-.grid-item .card:hover {
-    background-color: #005b96;
-    color: #011f4b;
-}
-
-.grid-item h4.card-title {
-    color: #03396c;
-    font-size: 6rem;
-}
-
-.grid-item a:hover {
-    text-decoration: none;
-}
 
 /*--------------------------------------------------------------
 # Layout
